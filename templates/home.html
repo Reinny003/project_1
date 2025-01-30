@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homecare Hospital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('./background.jpeg') no-repeat center center/cover;
+            /* Replace 'your-image-name.jpg' with the actual name of your image */
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-attachment: fixed; /* Keeps the background fixed when scrolling */
+        }
+
+        header {
+            padding: 50px 20px;
+            color: #007bff;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+            nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-top: 20px;
+        padding: 0;
+        }
+
+        nav ul li {
+        margin: 0 10px;
+        }
+
+        nav ul li a {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        }
+
+        nav ul li a:hover {
+        background-color: #0056b3;
+        border-color: #ffcc00;
+        color: #ffcc00;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            gap: 20px;
+        }
+
+        .box {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .box p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .box a {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .box a:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p.stylish {
+            font-size: 18px;
+            margin-top: 20px;
+            font-style: italic;
+            color: #ffcc00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .box {
+                max-width: 45%;
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            .hero {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .box {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+
+            .box h2 {
+                font-size: 20px;
+            }
+
+            .box p {
+                font-size: 14px;
+            }
+
+            footer p.stylish {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            .box h2 {
+                font-size: 18px;
+            }
+
+            .box p {
+                font-size: 12px;
+            }
+
+            .box a {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+
+            footer p.stylish {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Homecare </h1>
+        <p>Your health, our priority.</p>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/diabetes">Diabetes Care</a></li>
+                <li><a href="/hypertension">Hypertension Care</a></li>
+                <li><a href="/guidelines">Guidelines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="box">
+            <h2>Diabetes Care</h2>
+            <p>Comprehensive care for managing and controlling diabetes effectively.</p>
+            <a href="/diabetes">Learn More</a>
+        </div>
+        <div class="box">
+            <h2>Hypertension Care</h2>
+            <p>Expert guidance to help you maintain a healthy blood pressure.</p>
+            <a href="/hypertension">Learn More</a>
+        </div>
+    </section>
+
+    <footer>
+        <p class="stylish">Remember, every step you take towards better health is a step towards a brighter future. Stay positive, and we're here to help!</p>
+        <p>&copy; 2024 Homecare Hospital. All rights reserved.</p>
+    </footer>
+</body>
+</html>

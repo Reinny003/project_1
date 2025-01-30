@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypertension Care | Homecare Hospital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #007bff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .recommendations ul {
+            list-style-type: square;
+            padding-left: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .recommendations {
+            background-color: #ffffff;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: left;
+            color: #333;
+        }
+
+        .recommendations h3 {
+            font-size: 20px;
+            color: #007bff;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        .recommendations p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            th, td {
+                font-size: 14px;
+            }
+
+            input[type="submit"] {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+
+            .recommendations {
+                padding: 15px;
+                margin: 15px auto;
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            table, th, td {
+                font-size: 12px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .recommendations {
+                padding: 10px;
+                margin: 10px auto;
+                width: 95%;
+            }
+
+            .recommendations h3 {
+                font-size: 18px;
+            }
+
+            .recommendations p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/diabetes">Diabetes Care</a></li>
+                <li><a href="/hypertension">Hypertension Care</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Hypertension Care</h1>
+        <form method="POST">
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="text" name="male" required></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="text" name="age" required></td>
+                </tr>
+                <tr>
+                    <td>Current Smoker</td>
+                    <td><input type="text" name="currentSmoker" required></td>
+                </tr>
+                <tr>
+                    <td>Cigarettes per Day</td>
+                    <td><input type="text" name="cigsPerDay" required></td>
+                </tr>
+                <tr>
+                    <td>BP Meds</td>
+                    <td><input type="text" name="BPMeds" required></td>
+                </tr>
+                <tr>
+                    <td>Diabetes</td>
+                    <td><input type="text" name="diabetes" required></td>
+                </tr>
+                <tr>
+                    <td>Total Cholesterol</td>
+                    <td><input type="text" name="totChol" required></td>
+                </tr>
+                <tr>
+                    <td>Systolic BP</td>
+                    <td><input type="text" name="sysBP" required></td>
+                </tr>
+                <tr>
+                    <td>Diastolic BP</td>
+                    <td><input type="text" name="diaBP" required></td>
+                </tr>
+                <tr>
+                    <td>BMI</td>
+                    <td><input type="text" name="BMI" required></td>
+                </tr>
+                <tr>
+                    <td>Heart Rate</td>
+                    <td><input type="text" name="heartRate" required></td>
+                </tr>
+                <tr>
+                    <td>Glucose</td>
+                    <td><input type="text" name="glucose" required></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+        <h3>Input Values:</h3>
+        <table>
+            <tr><th>Gender</th><td>{{ features[0] }}</td></tr>
+            <tr><th>Age</th><td>{{ features[1] }}</td></tr>
+            <tr><th>Current Smoker</th><td>{{ features[2] }}</td></tr>
+            <tr><th>Cigarettes per day</th><td>{{ features[3] }}</td></tr>
+            <tr><th>BP Meds</th><td>{{ features[4] }}</td></tr>
+            <tr><th>Diabetes</th><td>{{ features[5] }}</td></tr>
+            <tr><th>Total Cholestrol</th><td>{{ features[6] }}</td></tr>
+            <tr><th>Systolic BP</th><td>{{ features[7] }}</td></tr>
+            <tr><th>Diastolic BP</th><td>{{ features[8] }}</td></tr>
+            <tr><th>BMI</th><td>{{ features[9] }}</td></tr>
+            <tr><th>Heart Rate</th><td>{{ features[10] }}</td></tr>
+            <tr><th>Glucose</th><td>{{ features[11] }}</td></tr>
+        </table>
+        {% endif %}
+    </section>
+
+    {% if recommendations %}
+    <div class="recommendations">
+        <h3>Recommendations:</h3>
+        <p>{{ recommendations | safe }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>

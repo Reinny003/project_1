@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Care | Homecare Hospital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            padding: 10px 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+        nav ul li {
+            margin: 0 10px; /* Adjusted for smaller spacing */
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 5px 10px; /* Added padding for better spacing */
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%; /* Full width on small screens */
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .recommendations {
+            background-color: #ffffff;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: left;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .recommendations h3 {
+            font-size: 20px;
+            color: #007bff;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .recommendations p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav ul li a {
+                font-size: 14px;
+            }
+            .content {
+                padding: 10px;
+            }
+            table {
+                font-size: 14px;
+            }
+            th, td {
+                padding: 8px;
+            }
+            input[type="submit"] {
+                width: 100%; /* Full-width button on smaller screens */
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column; /* Stack navigation items */
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            th, td {
+                display: block; /* Make table rows stack */
+                text-align: left; /* Align text to the left */
+            }
+            th {
+                background-color: transparent; /* Remove background for better readability */
+                color: #007bff;
+            }
+            td {
+                border: none; /* Remove borders for a cleaner look */
+                padding: 5px 0;
+            }
+            table {
+                width: 100%; /* Ensure table fits small screens */
+            }
+            .recommendations {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/diabetes">Diabetes Care</a></li>
+                <li><a href="/hypertension">Hypertension Care</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Diabetes Care</h1>
+        <form method="POST">
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Gender (0 for Male, 1 for Female)</td>
+                    <td><input type="text" name="gender" required></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="text" name="age" required></td>
+                </tr>
+                <tr>
+                    <td>Urea</td>
+                    <td><input type="text" name="urea" required></td>
+                </tr>
+                <tr>
+                    <td>Creatinine</td>
+                    <td><input type="text" name="creatinine" required></td>
+                </tr>
+                <tr>
+                    <td>Haemoglobin</td>
+                    <td><input type="text" name="haemoglobin" required></td>
+                </tr>
+                <tr>
+                    <td>Cholesterol</td>
+                    <td><input type="text" name="chol" required></td>
+                </tr>
+                <tr>
+                    <td>Triglycerides</td>
+                    <td><input type="text" name="tg" required></td>
+                </tr>
+                <tr>
+                    <td>High-Density Lipoprotein (HDL)</td>
+                    <td><input type="text" name="hdl" required></td>
+                </tr>
+                <tr>
+                    <td>Low-Density Lipoprotein (LDL)</td>
+                    <td><input type="text" name="ldl" required></td>
+                </tr>
+                <tr>
+                    <td>Very-Low-Density Lipoprotein (VLDL)</td>
+                    <td><input type="text" name="vldl" required></td>
+                </tr>
+                <tr>
+                    <td>BMI</td>
+                    <td><input type="text" name="bmi" required></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+        <h3>Input Values:</h3>
+        <table>
+            <tr><th>Gender</th><td>{{ features[0] }}</td></tr>
+            <tr><th>Age</th><td>{{ features[1] }}</td></tr>
+            <tr><th>Urea</th><td>{{ features[2] }}</td></tr>
+            <tr><th>Creatinine</th><td>{{ features[3] }}</td></tr>
+            <tr><th>Haemoglobin</th><td>{{ features[4] }}</td></tr>
+            <tr><th>Cholesterol</th><td>{{ features[5] }}</td></tr>
+            <tr><th>Triglycerides</th><td>{{ features[6] }}</td></tr>
+            <tr><th>High-Density Lipoprotein (HDL)</th><td>{{ features[7] }}</td></tr>
+            <tr><th>Low-Density Lipoprotein (LDL)</th><td>{{ features[8] }}</td></tr>
+            <tr><th>Very-Low-Density Lipoprotein (VLDL)</th><td>{{ features[9] }}</td></tr>
+            <tr><th>BMI</th><td>{{ features[10] }}</td></tr>
+        </table>
+        {% endif %}
+    </section>
+
+    {% if recommendations %}
+    <div class="recommendations">
+        <h3>Recommendations:</h3>
+        <p>{{ recommendations | safe }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>

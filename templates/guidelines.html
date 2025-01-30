@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Guidelines | Homecare Hospital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #007bff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .guidelines {
+            padding: 40px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .guidelines h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .guideline-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .guideline-section h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            font-size: 20px;
+        }
+
+        .guideline-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .guideline-section ul li {
+            margin-bottom: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .guideline-section ol {
+            margin: 10px 0 10px 20px;
+            color: #555;
+        }
+
+        .guideline-section ul li strong {
+            color: #007bff;
+        }
+
+        @media (max-width: 768px) {
+            .guidelines {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            .guideline-section h2 {
+                font-size: 18px;
+            }
+
+            .guideline-section {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .guidelines {
+                padding: 15px;
+            }
+
+            .guideline-section h2 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/diabetes">Diabetes Care</a></li>
+                <li><a href="/hypertension">Hypertension Care</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="guidelines">
+        <h1>Guidelines for Patients</h1>
+
+        <div class="guideline-section">
+            <h2>For Diabetes Care Patients</h2>
+            <ul>
+                <li><strong>Navigation:</strong> 
+                    <ol>
+                        <li>Click on the <strong>Diabetes Care</strong> menu option in the navigation bar.</li>
+                        <li>You will be directed to the diabetes-specific page where you can enter your test results.</li>
+                    </ol>
+                </li>
+                <li><strong>Input Instructions:</strong> 
+                    <ol>
+                        <li>Use your blood glucose monitor to measure your <strong>Blood Glucose Level</strong> and input the value in the provided field.</li>
+                        <li>Check your Body Mass Index (BMI) using a BMI calculator and input the value.</li>
+                        <li>From your fasting lipid profile, enter values for:
+                            <ul>
+                                <li><strong>Total Cholesterol</strong></li>
+                                <li><strong>HDL Cholesterol</strong></li>
+                                <li><strong>LDL Cholesterol</strong></li>
+                                <li><strong>Triglycerides</strong></li>
+                            </ul>
+                        </li>
+                        <li>Enter your <strong>HbA1c</strong> level from your test report.</li>
+                        <li>Double-check your entries to ensure they match your gadget's results before submission.</li>
+                    </ol>
+                </li>
+                <li><strong>Submitting Data:</strong> 
+                    <ol>
+                        <li>Once all fields are filled, click the <strong>Submit</strong> button to get your prediction and recommendations.</li>
+                        <li>Review the recommendations displayed based on your inputs.</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+
+        <div class="guideline-section">
+            <h2>For Hypertension Care Patients</h2>
+            <ul>
+                <li><strong>Navigation:</strong> 
+                    <ol>
+                        <li>Click on the <strong>Hypertension Care</strong> menu option in the navigation bar.</li>
+                        <li>You will be directed to the hypertension-specific page where you can input your results.</li>
+                    </ol>
+                </li>
+                <li><strong>Input Instructions:</strong> 
+                    <ol>
+                        <li>Use a digital blood pressure monitor to measure your:
+                            <ul>
+                                <li><strong>Systolic Blood Pressure (sysBP)</strong></li>
+                                <li><strong>Diastolic Blood Pressure (diaBP)</strong></li>
+                            </ul>
+                        </li>
+                        <li>Measure your <strong>Heart Rate</strong> using your gadget and input the result.</li>
+                        <li>Use your BMI calculator to get your <strong>Body Mass Index</strong> and enter the value.</li>
+                        <li>Enter the following additional details:
+                            <ul>
+                                <li><strong>Age</strong></li>
+                                <li>Whether you are a <strong>Current Smoker</strong> (yes/no).</li>
+                                <li>The number of <strong>Cigarettes per Day</strong> (if applicable).</li>
+                                <li>Whether you take <strong>BP Meds</strong> (yes/no).</li>
+                                <li>Your <strong>Total Cholesterol</strong> and <strong>Glucose</strong> values from your lab results.</li>
+                            </ul>
+                        </li>
+                        <li>Ensure all entries are accurate and match your gadget's or lab results.</li>
+                    </ol>
+                </li>
+                <li><strong>Submitting Data:</strong> 
+                    <ol>
+                        <li>After completing the form, click the <strong>Submit</strong> button to view your prediction and receive actionable recommendations.</li>
+                        <li>Read the displayed recommendations to understand the next steps for managing your hypertension.</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
